@@ -1,0 +1,135 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+.outer-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.outer-container h1{
+  font-size: 35px;
+  font-family: sans-serif;
+}
+.multi-select-search-container{
+  max-width: 500px;
+  height: 400px;
+  /* border: 2px solid black; */
+}
+.user-search-input{
+  width: 100%;
+  border:2px solid darkgrey;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
+.user-search-input input{
+  background-color: aliceblue;
+  outline:none;
+  border:none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.suggest-list{
+  list-style-type: none;
+  margin-left: -1rem;
+  overflow-y: scroll;
+}
+.suggest-list .suggest-list-item{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center  ;
+  margin: 5px 10px;
+  padding : 5px 10px;
+  cursor: pointer;
+}
+.suggest-list .suggest-list-item:hover{
+  background-color: cyan;
+  border-radius: 10px;
+ 
+}
+.suggest-list .suggest-list-item img{
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+}
+.suggest-list .suggest-list-item span{
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.pills-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pill{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  padding:5px 10px;
+  margin:2px 3px;
+  border-radius: 10px;
+  background-color: darkblue;
+  font-family: sans-serif;
+  color:white;
+  position: relative;
+}
+
+.pill img{
+  width : 20px;
+  height :20px;
+}
+
+.pill .pill-n ame{
+  font-size: 13px;
+}
+/* .pill .pill-cancel{
+  position: absolute;
+  right:5px;
+  top:5px;
+} */
