@@ -59,7 +59,7 @@ const FormValidationWithoutYup = () => {
     return (
       password.length >= 8 &&
       symbolRegex.test(password) &&
-      numberRegex.text(password) &&
+      numberRegex.test(password) &&
       uppercase.test(password) &&
       lowercase.test(password)
     );
@@ -75,7 +75,7 @@ const FormValidationWithoutYup = () => {
       newErrors.firstName = "First name is required";
     }
     if (!formData.lastName) {
-      newErrors.firstName = "Last name is required";
+      newErrors.lastName = "Last name is required";
     }
     if (!formData.email) {
       newErrors.email = "Email is required";
@@ -143,7 +143,7 @@ const FormValidationWithoutYup = () => {
               value={formData.firstName}
               onChange={handleChange}
             />
-            {/* <div>first Name is required*.</div> */}
+            {errors.firstName && <div className="error">{errors.firstName}</div>}
           </div>
           <div className="field">
             <label htmlFor="">Last Name* :</label>
@@ -154,6 +154,7 @@ const FormValidationWithoutYup = () => {
               value={formData.lastName}
               onChange={handleChange}
             />
+             {errors.lastName && <div className="error">{errors.lastName}</div>}
           </div>
           <div className="field">
             <label htmlFor="">Email*:</label>
@@ -164,6 +165,7 @@ const FormValidationWithoutYup = () => {
               value={formData.email}
               onChange={handleChange}
             />
+             {errors.email && <div className="error">{errors.email}</div>}
           </div>
           <div className="field">
             <label htmlFor="">Password* :</label>
@@ -175,6 +177,7 @@ const FormValidationWithoutYup = () => {
               onChange={handleChange}
             />
           </div>
+          {errors.password && <div className="error">{errors.password}</div>}
           <div className="field">
             <label htmlFor="">Confirm Password* :</label>
             <input
@@ -184,6 +187,7 @@ const FormValidationWithoutYup = () => {
               value={formData.confirmPassword}
               onChange={handleChange}
             />
+             {errors.confirmPassword && <div className="error">{errors.confirmPassword}</div>}
           </div>
           <div className="field">
             <label htmlFor="">Phone Number* :</label>
@@ -194,6 +198,7 @@ const FormValidationWithoutYup = () => {
               value={formData.phoneNumber}
               onChange={handleChange}
             />
+             {errors.phoneNumber && <div className="error">{errors.phoneNumber}</div>}
           </div>
           <div className="field">
             <label htmlFor="">Age* :</label>
@@ -204,6 +209,7 @@ const FormValidationWithoutYup = () => {
               value={formData.age}
               onChange={handleChange}
             />
+             {errors.age && <div className="error">{errors.age}</div>}
           </div>
           <div className="field">
             <label>Gender* :</label>
@@ -216,6 +222,7 @@ const FormValidationWithoutYup = () => {
               <option value="female">Female</option>
               <option value="other">Other</option>
             </select>
+            {errors.gender && <div className="error">{errors.gender}</div>}
           </div>
           <div className="field">
             <label htmlFor="">Interests* :</label>
@@ -246,6 +253,7 @@ const FormValidationWithoutYup = () => {
               />
               Reading
             </label>
+            {errors.interests && <div className="error">{errors.interests}</div>}
           </div>
           <div className="field">
             <label htmlFor="">Birth Date * :</label>
@@ -255,6 +263,7 @@ const FormValidationWithoutYup = () => {
               value={formData.birthDate}
               onChange={handleChange}
             />
+             {errors.birthDate && <div className="error">{errors.birthDate}</div>}
           </div>
           <button type="submit" className="submit" onClick={onSubmitHandler}>
             Submit
