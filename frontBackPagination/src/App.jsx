@@ -10,9 +10,9 @@ function App() {
 //   fetch('https://dummyjson.com/products?limit=100')
 // .then(res => res.json())
 // .then(console.log);
-fetch('https://dummyjson.com/products?limit=10&skip=0')
-.then(res => res.json())
-.then(console.log);          
+// fetch('https://dummyjson.com/products?limit=10&skip=0')
+// .then(res => res.json())
+// .then(console.log);          
 
 useEffect(() => {
 
